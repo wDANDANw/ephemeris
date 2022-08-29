@@ -1,31 +1,22 @@
 {
-  "name": "ephemeris",
-  "version": "9.20.11",
-  "description": "System Engineering and requirements management application",
-  "main": "index.js",
+  "name": "simplest node express server",
+  "version": "1.0.0",
+  "description": "simple web host with node + express",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp",
-    "build": "node pack.js",
-    "pack": "gulp && node pack.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shuart/ephemeris.git"
+    "start": "node app.js"
   },
   "keywords": [
-    "SE"
+    "node",
+    "express",
+    "server",
+    "simple"
   ],
-  "author": "Stéphane Huart",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shuart/ephemeris/issues"
-  },
-  "homepage": "https://github.com/shuart/ephemeris#readme",
-  "devDependencies": {
-    "nw-builder": "^3.5.7"
-  },
+  "author": "Raphael",
   "dependencies": {
-    "gulp": "^4.0.0"
+    "express": "latest",
+    "express-static-gzip": "latest",
+    "compression": "^1.7.4",
+    "path": "^0.12.7"
   }
 }
