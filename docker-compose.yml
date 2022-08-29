@@ -1,0 +1,15 @@
+version: '3.0'
+services:
+  ephemeris:
+    restart: on-failure
+    build: ./ephemeris
+    environment:
+      - PORT=5000
+    ports:
+      - '81:5000'
+  nginx:
+    build: ./nginx
+    ports:
+    - '80:80'
+    depends_on:
+    - ephemeris

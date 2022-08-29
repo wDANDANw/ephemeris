@@ -42,6 +42,8 @@ app.use(compression({threshold: 0}));
 // app.use("/game", (req, res, next) => {console.log(req.originalUrl); next();}, expressStaticGzip(path.resolve(__dirname, '../dist')));
 
 // Serve Public Files
-app.use('/', express.static(path.resolve(__dirname, './public')));
+console.log ("Logging" + port)
+console.log (path.resolve(__dirname, './public'))
+app.use('/', (req, res, next)=>{ console.log(req.originalUrl); next();}, express.static(path.resolve(__dirname, './public')));
 
 app.listen(port);
